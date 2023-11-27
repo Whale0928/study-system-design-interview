@@ -3,7 +3,7 @@
 > 웹, 앱 데이터베이스, 캐시 등 전부 서버 한 대에서 실행된다.
 > 
 
-<img width="369" alt="스크린샷 2023-11-26 오후 3 02 43" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/c9dbf2e8-2a93-4518-8dde-16e74f092730">
+<img width="1035" alt="스크린샷 2023-11-27 오후 9 49 12" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/ccb1af46-d03d-4948-b7c5-bf731cfc92bd">
 
 
 1. 사용자는 웹 브라우저나 모바일 앱을 통해 도메인 이름(예: [www.mysite.com](http://www.mysite.com/), api.mysite.com)으로 웹사이트에 접속을 시도합니다.
@@ -51,14 +51,14 @@ DNS (Domain Name System), CDN (Content Delivery Network), 로드 밸런서(Load 
 
 (1장 후반부의 42페이지의 이미지를 첨부 - 이렇게 확장됩니다.)
 
-<img width="429" alt="스크린샷 2023-11-26 오후 3 05 17" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/d8fdc6c9-82fa-44bc-ac29-df7bd31f6627">
+<img width="654" alt="스크린샷 2023-11-26 오후 3 05 17" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/d8fdc6c9-82fa-44bc-ac29-df7bd31f6627">
 
 ### 2-1. 데이터베이스
 
 > 웹/모바일 트래픽 처리서버(웹계층)과 데이터 서버(데이터계층) 을 분리하여 늘어난 사용자에게 서비스의 가용성을 확대할 수 있다.
 > 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/43abd0ae-735e-4218-a0e8-8ee2927505ff/2d43ab92-e061-43ec-8fb8-bdb24d688f37/Untitled.png)
+<img width="654" alt="Untitled (42)" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/49ba9e8f-9945-4ebb-9320-8fa88296cf1e">
 
 관계형 데이터베이스(Relational Database)와 비관계형 데이터베이스(NoSQL Database)로 크게 두 가지로 나눌 수 있습니다. 
 
@@ -123,7 +123,7 @@ DNS (Domain Name System), CDN (Content Delivery Network), 로드 밸런서(Load 
 그리고 특정 서버에서 문제가 발생하면 로드밸런서는 해당 서버로의 트래픽을 차단하고 다른 서버로 트래픽을 전환해 가용성이 향상됩니다.
 > 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/43abd0ae-735e-4218-a0e8-8ee2927505ff/c0c77f6a-3be7-493b-8cf1-b9b3a572fdd7/Untitled.png)
+<img width="654" alt="1" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/136f6239-642a-43fa-a183-7ecfdc90d8ce">
 
 - OSI(Open Systems Interconnection) 모델의 7계층
     1. 물리 계층(Physical Layer): 실제 전기적, 물리적 신호 전송이 일어나는 계층입니다.
@@ -178,7 +178,8 @@ DNS (Domain Name System), CDN (Content Delivery Network), 로드 밸런서(Load 
 여러개의 노드에 각자의 역할과 규칙을 정한 기본의 다중화 방식을 이용하면 좀 더 효율적인 DB관리가 가능하다.
 > 
 
-![스크린샷 2023-11-24 오후 11.27.27.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/43abd0ae-735e-4218-a0e8-8ee2927505ff/91ef325d-44b7-4a8c-8e5b-c1083a698ad7/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-11-24_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_11.27.27.png)
+
+<img width="654" alt="스크린샷 2023-11-24 오후 11 27 27" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/a85cbeee-4d55-437c-b2be-f9512f5753d5">
 
 데이터베이스 다중화는 Source-Replica(이전에는 Master-Slave라고 불렸으나, 최근에는 부정적인 역사적 함의를 고려하여 Source-Replica로 더 많이 사용되고 있음) 구조로 이루어져 있습니다. 
 
@@ -257,7 +258,8 @@ DNS (Domain Name System), CDN (Content Delivery Network), 로드 밸런서(Load 
 
 ---
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/43abd0ae-735e-4218-a0e8-8ee2927505ff/7fc9ddd9-df7b-44af-aed9-8709429d2a1d/Untitled.png)
+<img width="654" alt="2" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/a24a0f27-0114-4445-8565-7a026d9db8b6">
+
 
 현재의 페이스북과 같은 대규모 소셜 미디어 플랫폼의 경우, 데이터베이스 관리 전략으로서 리플리케이션과 클러스터링 모두 필요하고 중요합니다. 
 
@@ -277,7 +279,7 @@ DNS (Domain Name System), CDN (Content Delivery Network), 로드 밸런서(Load 
 서버와 데이터베이스 중간에 위치시켜서 이전에 조회했던 데이터에 대해서는 데이터베이스에서 조회하지 않고, 캐시에서 바로 데이터를 가져와서 응답함으로써 데이터베이스의 부하를 줄일 수 있습니다.
 > 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/43abd0ae-735e-4218-a0e8-8ee2927505ff/30ca94d9-8aa2-4db4-8463-edb71bbfb160/Untitled.png)
+<img width="654" alt="3" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/f4b48751-e1e5-4748-9d34-0202b1b230c3">
 
 **캐시 사용 시 유의할 점**
 
@@ -299,10 +301,8 @@ DNS (Domain Name System), CDN (Content Delivery Network), 로드 밸런서(Load 
 
 > CDN (Content Delivery Network)은 정적 콘텐츠를 효율적으로 전송하기 위해 사용되는 지리적으로 분산된 서버 네트워크입니다. CDN의 주요 목적은 사용자에게 더 빠른 액세스를 제공하고 웹 서비스의 로딩 시간을 단축하는 것입니다.
 > 
+<img width="654" alt="스크린샷 2023-11-27 오후 9 54 56" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/99c4bc57-6965-421f-8d1c-15a6a41bf6bb">
 
-![스크린샷 2023-11-26 오후 3.33.19.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/43abd0ae-735e-4218-a0e8-8ee2927505ff/bd91e0d4-55eb-4149-9c39-26b5358e9eba/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-11-26_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.33.19.png)
-
-![스크린샷 2023-11-26 오후 3.33.24.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/43abd0ae-735e-4218-a0e8-8ee2927505ff/702e1eec-3291-4d2e-b898-695354c30a68/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-11-26_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.33.24.png)
 
 1. **CDN의 기본 원리:**
     - CDN은 지리적으로 분산된 서버 네트워크로 구성되어 있어, 정적 콘텐츠(이미지, 비디오, CSS, JavaScript 파일 등)를 캐싱하고 전송하는 데 사용됩니다.
@@ -325,13 +325,15 @@ DNS (Domain Name System), CDN (Content Delivery Network), 로드 밸런서(Load 
 
 CDN(Content Delivery Network)은 글로벌 서비스를 제공하는 웹사이트나 애플리케이션의 아키텍처 설계에서 중요한 네트워크 구성요소입니다.
 
+
 ### 6-1. **무상태(stateless) 웹 계층**
 
 > 무상태 웹 계층(Stateless Web Layer)은 웹 개발에서 클라이언트와 서버 간의 상호작용이 특정 세션 또는 사용자 상태에 의존하지 않는 방식을 말합니다. 
 HTTP는 기본적으로 무상태 프로토콜입니다. 각 요청은 독립적이며, 서버는 이전 요청이나 상태를 기억하지 않습니다.
 > 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/43abd0ae-735e-4218-a0e8-8ee2927505ff/5fd4b10f-cc32-471a-a4af-4e9f831290e7/Untitled.png)
+<img width="654" alt="Untitled (43)" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/b3be5479-b5ee-420e-816c-61ff96ea5f98">
+
 
 ---
 
@@ -371,3 +373,39 @@ HTTP는 기본적으로 무상태 프로토콜입니다. 각 요청은 독립적
 4. **리소스 절약**: 서버에서 클라이언트 세션을 유지할 필요가 없을 때 서버 리소스를 절약할 수 있습니다.
 5. **처리 능력 한계**: 한 서버가 처리할 수 있는 클라이언트 수에 제한이 있으며, 초과 시 새로운 클라이언트 처리가 지연될 수 있습니다.
 6. **Stateless와의 비교**: Stateless는 순간적인 접속 요청 수를 기준으로 처리하므로, 더 많은 클라이언트 요청에 대응할 수 있습니다.
+
+
+### 6-1. **데이터 센터**
+
+> 지리적 위치에 기반한 DNS 라우팅을 통해 사용자 요청을 가장 가까운 데이터 센터로 전송하는 인프라를 뜻합니다.
+> 
+
+<img width="865" alt="스크린샷 2023-11-27 오후 10 37 38" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/a5eafa30-e96b-4f2b-86a5-b9cf4573bb6f">
+
+
+1. **트래픽 우회**: *GeoDNS를 사용하여 사용자의 트래픽을 다른 데이터 센터로 우회시켜 서비스의 연속성을 보장합니다. 이는 장애 발생 시 트래픽을 자동으로 전환하는 장애 대응 메커니즘을 포함합니다.
+2. **데이터 동기화**: 데이터 센터 간에 일관된 데이터 상태를 유지하여 FaceBook 같은 기업들이 글로벌 서비스를 원활하게 관리할 수 있도록 합니다.
+3. **테스트 및 배포**: 어떤 데이터 센터를 사용하든지, 시스템이 구성 요소의 신속한 테스트와 함께 새로운 업데이트를 빠르게 배포할 수 있도록 지원하는 프로세스를 갖추는 것의 중요성을 강조합니다. 이는 장애 발생 시 빠른 복구와 지속적인 서비스 제공을 가능하게 합니다.
+
+*GeoDNS
+GeoDNS, 또는 지리적 DNS,는 사용자의 지리적 위치를 기반으로 사용자의 DNS 쿼리를 가장 빠르게 응답할 수 있는 서버로 라우팅하는 기술입니다.
+ 이 시스템은 사용자가 요청을 보낼 때 그들의 IP 주소를 확인하고, 그 IP 주소의 지리적 위치를 결정하여, 그에 따라 사용자를 가장 가까운 또는 가장 적절한 데이터 센터의 서버로 연결합니다. 
+ex) 한/중/일 → 아시아서버, 캐나다/미국 → 북미서버 등
+
+**데이터센터의 부재 - 카카오사건**
+
+<img width="430" alt="image" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/198e2cff-22a3-43cd-b2a3-a76d8228fb16">
+
+
+---
+
+
+### 6-2. **데이터 센터 재해 와 BCP(**비즈니스 연속성 계획)
+
+> BCP는 기업이 재해, 사고 또는 다른 예기치 않은 사건이 발생했을 때 중단 없이 비즈니스를 지속할 수 있도록 하는 전략과 프로세스를 포함합니다. 데이터 센터의 운영 중단을 포함한 다양한 위험 상황에 대한 대응 계획을 준비하고, 중요 비즈니스 기능이 지속될 수 있도록 데이터 보호하는 것을 목표로 합니다.
+> 
+- **BIA (Business Impact Analysis)**:  장애나 재해로 인한 영향을 평가하여 비즈니스 운영에 중요한 요소를 식별합니다.
+- **RTO (Recovery Time Objective)**: 업무 중단 후 필요한 업무 복구 시간을 정의합니다.
+- **RPO (Recovery Point Objective)**:데이터 복구를 위해 허용되는 최대 데이터 손실 시간을 설정합니다.
+- **DRP (Disaster Recovery Plan)**: 재해 발생 시 장기간 운영 중단에 대비한 계획을 수립합니다.
+- **DRS (Disaster Recovery Site)**: 재해 발생 시 운영을 지속할 수 있는 재해 복구 센터를 확보합니다.
