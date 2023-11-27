@@ -51,7 +51,7 @@
 
       2. 처리율 제한 장치 미들웨어를 통한 구현
 
-       ![처리율제한장치상세설계](https://github.com/organization-for-study/study-system-design-interview/assets/126097518/55167a00-89fb-4fd9-b5c3-8c29360f33be)
+        ![미들웨어](https://github.com/organization-for-study/study-system-design-interview/assets/126097518/38068010-d919-4053-b8c1-c6c521cee837)
 
        - API서버의 처리율이 초당 2개의 요청으로 제한된 상황
        - 클라이언트가 3번째 요청을 같은 초 범위 내에서 전송함.
