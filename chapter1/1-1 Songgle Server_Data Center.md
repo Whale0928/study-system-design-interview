@@ -53,16 +53,6 @@ DNS (Domain Name System), CDN (Content Delivery Network), 로드 밸런서(Load 
 
 <img width="429" alt="스크린샷 2023-11-26 오후 3 05 17" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/d8fdc6c9-82fa-44bc-ac29-df7bd31f6627">
 
-### **1-2. 시스템 설계 아키텍쳐로 인한 규모 확장**
-
-위 페이스북 사례처럼 서비스가 확장되며 규모가 커지지게된다면 단일 서버 구성의 한계를 넘어서면 여러 시스템 아키텍처를 사용하게 됩니다. 1장에서는 점차 확장되는 시스템 아키텍쳐 구성들을 보여주고 있습니다.
-
-DNS (Domain Name System), CDN (Content Delivery Network), 로드 밸런서(Load Balancer), 데이터베이스 샤딩(Database Sharding), 캐시(Cache), NoSQL / SQL 데이터베이스 등을 이용하여 1장 전반적으로 “사용자 수에따른 규모 확장성”을 단계적으로 설명해주고 있습니다.
-
-(1장 후반부의 42페이지의 이미지를 첨부 - 이렇게 확장됩니다.)
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/43abd0ae-735e-4218-a0e8-8ee2927505ff/3b238a38-7e8b-4519-a679-2f4ce2acf568/Untitled.png)
-
 ### 2-1. 데이터베이스
 
 > 웹/모바일 트래픽 처리서버(웹계층)과 데이터 서버(데이터계층) 을 분리하여 늘어난 사용자에게 서비스의 가용성을 확대할 수 있다.
