@@ -44,12 +44,12 @@
     
     : 클라이언트 요청은 쉽게 위변조가 가능함. → 가능하면 서버 측에 두는 것이 좋음.
     
-    - 서버 측에 둘 경우
-      1. 서버 측에서 구현
+  - 서버 측에 둘 경우
+    1. 서버 측에서 구현
        
         ![서버측처리율제한장치](https://github.com/organization-for-study/study-system-design-interview/assets/126097518/189c73fc-f4cd-4f18-a35e-41051d24c06f)
 
-      2. 처리율 제한 장치 미들웨어를 통한 구현
+    2. 처리율 제한 장치 미들웨어를 통한 구현
 
         ![미들웨어](https://github.com/organization-for-study/study-system-design-interview/assets/126097518/38068010-d919-4053-b8c1-c6c521cee837)
 
