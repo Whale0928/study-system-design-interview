@@ -89,27 +89,34 @@
 **계산방법** 
 
 1. **초당 쓰기 연산 (Write Operations per Second, WOPS)**:
+   
   <img width="460" alt="s-0" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/de7768a7-5bb7-411f-9aac-c05a80d24185">
 
-    - 시스템이 하루 동안 처리해야 할 작업량을 일일 초로 나누어, 평균적인 초당 쓰기 요청량을 산출합니다. 하루는 24시간, 1시간은 3600초, 즉, 하루는 총 86,400초입니다. 
-    따라서 하루에 1억 개의 URL을 생성해야 한다면, 시스템은 초당 약 1160개의 쓰기 작업을 수행해야 합니다. 시스템이 감당해야 할 최소 쓰기 부하를 나타내며, 피크 타임의 부하는 이보다 클 수 있습니다.
-2. **초당 읽기 연산 (Read Operations per Second, ROPS)**:
+- 시스템이 하루 동안 처리해야 할 작업량을 일일 초로 나누어, 평균적인 초당 쓰기 요청량을 산출합니다. 하루는 24시간, 1시간은 3600초, 즉, 하루는 총 86,400초입니다. 
+따라서 하루에 1억 개의 URL을 생성해야 한다면, 시스템은 초당 약 1160개의 쓰기 작업을 수행해야 합니다. 시스템이 감당해야 할 최소 쓰기 부하를 나타내며, 피크 타임의 부하는 이보다 클 수 있습니다.
+
+3. **초당 읽기 연산 (Read Operations per Second, ROPS)**:
+   
   <img width="456" alt="s-1" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/6394688c-3ba8-467a-aa2e-32fc041b76e8">
 
-    - 여기서 읽기 연산은 보통 쓰기 연산보다 훨씬 빈번하게 발생합니다. 
-    단축 URL 서비스의 경우, 사용자는 생성된 단축 URL을 사용해 원본 페이지로 리디렉션을 요청하는 읽기 작업을 더 자주 수행합니다. 
-    읽기와 쓰기 비율이 10:1이라고 가정할 때, 이는 시스템이 쓰기 작업보다 10배 더 많은 읽기 작업을 처리해야 함을 의미합니다. 따라서 이 공식은 시스템이 초당 처리해야 할 읽기 요청량을 산출합니다.
-3. **총 레코드 수 (Total Records over 10 Years)**:
+- 여기서 읽기 연산은 보통 쓰기 연산보다 훨씬 빈번하게 발생합니다. 
+단축 URL 서비스의 경우, 사용자는 생성된 단축 URL을 사용해 원본 페이지로 리디렉션을 요청하는 읽기 작업을 더 자주 수행합니다. 
+읽기와 쓰기 비율이 10:1이라고 가정할 때, 이는 시스템이 쓰기 작업보다 10배 더 많은 읽기 작업을 처리해야 함을 의미합니다. 따라서 이 공식은 시스템이 초당 처리해야 할 읽기 요청량을 산출합니다.
+
+5. **총 레코드 수 (Total Records over 10 Years)**:
+   
    <img width="702" alt="s-2" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/3ce0d539-4266-4009-9484-ae0bcbddc042">
 
-    - 이 계산은 시스템이 장기간 운영되는 동안 축적될 데이터의 총량을 예측하기 위한 것입니다. 
-    10년간 매일 1억 개의 단축 URL을 생성한다고 가정하면, 10년 후에 시스템이 처리해야 할 총 레코드 수는 약 3650억 개가 됩니다. 
-    데이터베이스 설계, 저장소 용량 계획 및 데이터 유지 관리 전략을 결정하는 데 중요한 지표입니다.
-4. **필요한 저장 용량 (Total Storage Requirement over 10 Years)**:
+- 이 계산은 시스템이 장기간 운영되는 동안 축적될 데이터의 총량을 예측하기 위한 것입니다. 
+10년간 매일 1억 개의 단축 URL을 생성한다고 가정하면, 10년 후에 시스템이 처리해야 할 총 레코드 수는 약 3650억 개가 됩니다. 
+데이터베이스 설계, 저장소 용량 계획 및 데이터 유지 관리 전략을 결정하는 데 중요한 지표입니다.
+
+7. **필요한 저장 용량 (Total Storage Requirement over 10 Years)**:
+   
     <img width="702" alt="s-3" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/7c5fcbb0-43d1-4815-b5bd-667f45f44a01">
    
-    - 시스템이 10년 동안 축적해야 하는 데이터의 양을 계산할 때, 각 URL이 평균적으로 얼마만큼의 공간을 차지하는지 고려해야 합니다.  여기서는 각 URL을 100바이트로 가정하여 계산합니다. 
-    실제로는 URL이 이보다 길거나 짧을 수 있지만, 평균치를 사용하여 총 저장 용량을 추정합니다. 이를 통해 시스템이 처리해야 할 데이터의 총량과 필요한 저장 공간을 예측할 수 있습니다.
+- 시스템이 10년 동안 축적해야 하는 데이터의 양을 계산할 때, 각 URL이 평균적으로 얼마만큼의 공간을 차지하는지 고려해야 합니다.  여기서는 각 URL을 100바이트로 가정하여 계산합니다. 
+실제로는 URL이 이보다 길거나 짧을 수 있지만, 평균치를 사용하여 총 저장 용량을 추정합니다. 이를 통해 시스템이 처리해야 할 데이터의 총량과 필요한 저장 공간을 예측할 수 있습니다.
 
 ---
 
@@ -150,7 +157,8 @@ RESTful API에서 관심사의 분리(Separation of Concerns, SoC)는 각 API �
 따라서, URL 단축 서비스를 운영하기 위해서는 최소한 이 두 가지 엔드포인트가 필요합니다. 
 하나는 URL을 단축하는 역할을 하고, 다른 하나는 단축된 URL을 원래의 긴 URL로 리디렉션하는 역할을 합니다.
 
-![Untitled](8%E1%84%8C%E1%85%A1%E1%86%BC%20-%20url%20%E1%84%83%E1%85%A1%E1%86%AB%E1%84%8E%E1%85%AE%E1%86%A8%E1%84%80%E1%85%B5%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%80%E1%85%A8%200d21506ade304acbbbd2e3f4b64e3b6c/Untitled.png)
+<img width="584" alt="Untitled (43)" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/3b293501-cd52-4b0b-bc82-d33707749937">
+
 
 ### 3 **- 3.  URL 리디렉션**
 
@@ -218,7 +226,7 @@ HTTP에서 Redirection에 관한 status, header를 제공합니다.
 www.tinyurl.com/[hashValue] 에서  [hashValue]는 원본 URL을 대표하는 고유한 해시값입니다.
 > 
 
-![Untitled](8%E1%84%8C%E1%85%A1%E1%86%BC%20-%20url%20%E1%84%83%E1%85%A1%E1%86%AB%E1%84%8E%E1%85%AE%E1%86%A8%E1%84%80%E1%85%B5%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%80%E1%85%A8%200d21506ade304acbbbd2e3f4b64e3b6c/Untitled%201.png)
+<img width="197" alt="Untitled (44)" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/c37d4762-40c3-42c8-a09b-8c367738dc07">
 
 - **해시값 :**
     - 해시값은 원본 데이터를 대표하는 고정 길이의 값입니다.
