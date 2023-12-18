@@ -1,6 +1,6 @@
 # 8장 - url 단축기 설계
 
-### **1 - 1.**  URL 단축기(URL shortening) 설계 ****
+### **1 - 1.**  URL 단축기(URL shortening) 설계 
 
 > URL 단축(URL shortening)은 **월드 와이드 웹 상의 긴 URL을 짧게 만들어 주는 기술**이다. 
 유명한 서비스로는 BitryURL이 있다.
