@@ -79,8 +79,8 @@
 ### **1 - 4. 웹 크롤러 윤리와 합법적으로 웹 크롤링을 하는 방법**
 
 > 너무 길어져서 링크 참조
-1편 :  [https://yozm.wishket.com/magazine/detail/878/](https://yozm.wishket.com/magazine/detail/878/)
-2편 : [https://yozm.wishket.com/magazine/detail/877/]/](https://yozm.wishket.com/magazine/detail/877/%5D/)
+> 1편 :  [https://yozm.wishket.com/magazine/detail/878/](https://yozm.wishket.com/magazine/detail/878/)
+> 2편 : [https://yozm.wishket.com/magazine/detail/877/]/](https://yozm.wishket.com/magazine/detail/877/%5D/)
 > 
 
 ### 2 **.  계략적 규모 추정과 설계**
@@ -96,7 +96,8 @@
 
 위의 요구사항대로 계략적 설계를 하면 아래 이미지처럼 된다.
 
-![Untitled](9%E1%84%8C%E1%85%A1%E1%86%BC%20-%20%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A9%E1%86%AF%E1%84%85%E1%85%A5%E1%84%89%E1%85%A5%E1%86%AF%E1%84%80%E1%85%A8%203e35ec9b643640a99106512bdf7aa345/Untitled.png)
+![Untitled](https://github.com/organization-for-study/study-system-design-interview/assets/97773895/6272bf09-66cb-4fa7-bf59-85d502d42033)
+
 
 - **시작 URL 집합**: 
 크롤러가 크롤링을 시작하는 지점입니다. 
@@ -151,7 +152,8 @@ HTML 페이지에서 링크를 파싱하여 추출합니다.
 시작 URL 집합으로부터 크롤링을 시작한 후 어떻게 웹을 탐색할지 결정하는 데 사용됩니다.
 > 
 
-![스크린샷 2024-01-03 오후 8.59.44.png](9%E1%84%8C%E1%85%A1%E1%86%BC%20-%20%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A9%E1%86%AF%E1%84%85%E1%85%A5%E1%84%89%E1%85%A5%E1%86%AF%E1%84%80%E1%85%A8%203e35ec9b643640a99106512bdf7aa345/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-01-03_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.59.44.png)
+<img width="713" alt="스크린샷 2024-01-03 오후 8 59 44" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/1318813e-b52b-4816-b333-013f146b0028">
+
 
 - **BFS 방식을 사용할 경우 :**
 웹의 넓은 영역을 폭넓게 탐색하려면 BFS가 유리합니다. 
@@ -198,9 +200,8 @@ DFS는 하나의 경로를 따라 링크의 최대 깊이까지 방문한 후에
     - 각각 다른 페이지를 요청하면, 전체적인 크롤링 속도를 높일 수 있습니다.
     - 각 스레드는 독립된 FIFO 큐를 가지고 있어 서로 다른 URL을 처리합니다.
 
-![Untitled](9%E1%84%8C%E1%85%A1%E1%86%BC%20-%20%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A9%E1%86%AF%E1%84%85%E1%85%A5%E1%84%89%E1%85%A5%E1%86%AF%E1%84%80%E1%85%A8%203e35ec9b643640a99106512bdf7aa345/Untitled%201.png)
+![캡처](https://github.com/organization-for-study/study-system-design-interview/assets/97773895/6a39358c-17df-40d5-82c6-2a606e0119de)
 
-![Untitled](9%E1%84%8C%E1%85%A1%E1%86%BC%20-%20%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A9%E1%86%AF%E1%84%85%E1%85%A5%E1%84%89%E1%85%A5%E1%86%AF%E1%84%80%E1%85%A8%203e35ec9b643640a99106512bdf7aa345/Untitled%202.png)
 
 즉, 각 다운로드 스레드는 별도의 FIFO 큐를 가지고 있어서 
 해당 큐에서 꺼낸 URL만 다운로드한다.
@@ -226,9 +227,9 @@ DFS는 하나의 경로를 따라 링크의 최대 깊이까지 방문한 후에
 - 우선순위
 - 신선도
 - 미수집 URL저장소를 위한 지속성 저장장치
-> 
+>
 
-![Untitled](9%E1%84%8C%E1%85%A1%E1%86%BC%20-%20%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A9%E1%86%AF%E1%84%85%E1%85%A5%E1%84%89%E1%85%A5%E1%86%AF%E1%84%80%E1%85%A8%203e35ec9b643640a99106512bdf7aa345/Untitled%203.png)
+<img width="412" alt="Untitled (1)" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/beb3ea47-9ac0-404d-a54f-dae5cbb75014">
 
 - 입력된 URL이 순위결정장치를 통과하여 여러 FIFO 큐 중 하나로 배정됩니다.
 - 큐 선택기가 큐에서 URL을 선택하여 크롤링을 진행합니다.
@@ -247,7 +248,8 @@ DFS는 하나의 경로를 따라 링크의 최대 깊이까지 방문한 후에
 
 **[ 완전체 ]**
 
-![Untitled](9%E1%84%8C%E1%85%A1%E1%86%BC%20-%20%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A9%E1%86%AF%E1%84%85%E1%85%A5%E1%84%89%E1%85%A5%E1%86%AF%E1%84%80%E1%85%A8%203e35ec9b643640a99106512bdf7aa345/Untitled%204.png)
+<img width="412" alt="Untitled (1)" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/2ec30248-39f7-46bf-aaeb-f1877ae23ce1">
+
 
 - 전면큐(front queue) : 우선순위 결정 과정을 처리한다.
 - 후면큐(back queue) : 크롤러가 예의 바르게 동작하도록 보증한다.
@@ -289,9 +291,9 @@ Robots.txt는 웹사이트의 루트 디렉토리에 위치하는 텍스트 파�
 > 
 
 - **분산 크롤링:**
-    
-    ![Untitled](9%E1%84%8C%E1%85%A1%E1%86%BC%20-%20%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A9%E1%86%AF%E1%84%85%E1%85%A5%E1%84%89%E1%85%A5%E1%86%AF%E1%84%80%E1%85%A8%203e35ec9b643640a99106512bdf7aa345/Untitled%205.png)
-    
+
+    <img width="307" alt="Untitled (3)" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/e51d678d-7cb4-4441-8a16-1380b2c4150b">
+
     - 크롤링 작업을 여러 서버로 분산시켜 성능을 향상시키는 방법입니다.
     - 각 서버는 여러 스레드를 사용하여 다운로드 작업을 처리합니다
     - URL 공간을 작은 단위로 분할하여 각 서버가 일부 다운로드를 담당한다.
@@ -346,7 +348,8 @@ Robots.txt는 웹사이트의 루트 디렉토리에 위치하는 텍스트 파�
 그리고 크롤링된 데이터를 검증하는 절차도 필수적입니다.
 > 
 
-![Untitled](9%E1%84%8C%E1%85%A1%E1%86%BC%20-%20%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A9%E1%86%AF%E1%84%85%E1%85%A5%E1%84%89%E1%85%A5%E1%86%AF%E1%84%80%E1%85%A8%203e35ec9b643640a99106512bdf7aa345/Untitled%206.png)
+<img width="609" alt="Untitled (4)" src="https://github.com/organization-for-study/study-system-design-interview/assets/97773895/225491fd-8f5a-4d2d-89e7-91173b5fa266">
+
 
 - **PNG 다운로더**
     - PNG 다운로더는 웹 페이지에서 PNG 형식의 이미지 파일을 다운로드하는 특화된 모듈입니다.
